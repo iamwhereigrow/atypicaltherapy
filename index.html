@@ -4,6 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Atypical Therapy</title>
+    
+<div class="menu-dropdown">
+    <a href="#about">About Me</a>
+    <a href="#services">Services & Specialties</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contact">Contact</a>
+    <a href="#terms">Terms</a>
+    <a href="#privacy">Privacy</a>
+    <a href="#resources">Resources</a>
+</div>
   <style>
     /* Reset and Base Styles */
     * {
@@ -55,12 +65,62 @@
         justify-content: center;
     }
 
-    .hamburger span {
+    .hamburger {
+        position: relative;
+        z-index: 100;
+        transition: transform 0.3s ease;
+    }
+
+    .hamburger:hover span {
+        background: #2596be; /* Color change on hover */
+    }
+
+    .menu-dropdown {
+        position: absolute;
+        top: 80px; /* Match header height */
+        right: -100%;
+        width: 250px;
+        background: white;
+        box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        transition: right 0.3s ease;
+        padding: 1rem;
+        z-index: 99;
+    }
+
+    .menu-dropdown.active {
+        right: 0;
+    }
+
+    .menu-dropdown a {
         display: block;
-        width: 25px;
-        height: 3px;
-        background: #333;
-        margin: 3px 0;
+        padding: 12px 16px;
+        color: #333;
+        text-decoration: none;
+        transition: all 0.2s ease;
+        border-radius: 4px;
+    }
+
+    .menu-dropdown a:hover {
+        background: #f0f4f8;
+        color: #2596be;
+        transform: translateX(4px);
+    }
+
+    /* Add to existing .hamburger styles */
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -8px);
+    }
+
+    .hamburger span {
+        transition: all 0.3s ease;
     }
 
     /* Rest of your existing styles remain the same */
@@ -133,6 +193,37 @@
         margin: 0 0.5rem;
     }
 </style>
+<script>
+    // Hamburger Menu Functionality
+    const hamburger = document.querySelector('.hamburger');
+    const menuDropdown = document.querySelector('.menu-dropdown');
+
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        menuDropdown.classList.toggle('active');
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!hamburger.contains(e.target) && !menuDropdown.contains(e.target)) {
+            hamburger.classList.remove('active');
+            menuDropdown.classList.remove('active');
+        }
+    });
+
+    // Smooth scroll for menu links (optional)
+    document.querySelectorAll('.menu-dropdown a').forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const targetId = link.getAttribute('href');
+            document.querySelector(targetId).scrollIntoView({
+                behavior: 'smooth'
+            });
+            hamburger.classList.remove('active');
+            menuDropdown.classList.remove('active');
+        });
+    });
+</script>
 </head>
 <body>
     <header class="header">
