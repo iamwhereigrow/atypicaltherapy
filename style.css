@@ -45,15 +45,6 @@ body {
     padding: 0;
 }
 
-nav {
-    padding: 1rem 2rem;
-    background: var(--white);
-    border-bottom: 2px solid var(--primary-color);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
 .logo {
     max-width: 60%; /* Prevent logo from taking full width */
     display: flex;
@@ -74,31 +65,23 @@ nav {
 
 /* Mobile responsive */
 @media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-        gap: 1rem;
-        padding: 1rem;
-    }
-    
+
     .nav-links {
         flex-wrap: wrap;
         justify-content: center;
     }
-}
 .fixed-header {
     position: fixed;
     top: 0;
-    left: 0; /* Add this */
-    right: 0; /* Add this */
-    width: 100vw; /* Change from 100% */
-    overflow: hidden; /* Prevent content overflow */
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 0.5rem 1rem;
     background: var(--white);
     border-bottom: 2px solid var(--primary-color);
     z-index: 1000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
 
 /* Hide regular menu on mobile */
@@ -113,8 +96,9 @@ nav {
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 100%;
-    right: 0;
+    top: 70px !important; /* Adjust based on header height */
+    right: 10px !important; /* Prevents off-screen overflow */
+    left: auto !important;
     background: var(--white);
     padding: 1rem;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
@@ -129,6 +113,7 @@ nav {
     cursor: pointer;
     color: var(--primary-color);
     flex-shrink: 0; /* Prevent button from shrinking */
+    order: 2;
     margin-left: auto; /* Push to far right */
 }
 
@@ -140,14 +125,13 @@ nav {
     }
     
     .logo {
+        order: 2;
         max-width: 50%;
     }
     
-    .nav-menu.active {
-        width: 100%;
-        left: 0;
-        right: 0;
-        box-sizing: border-box;
+    .nav-menu {
+        order: 3; /* Pushes desktop menu to right */
+        margin-left: auto;
     }
 }
 
