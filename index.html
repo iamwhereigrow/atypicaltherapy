@@ -5,15 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Atypical Therapy</title>
     
-<div class="menu-dropdown">
-    <a href="#about">About Me</a>
-    <a href="#services">Services & Specialties</a>
-    <a href="#faq">FAQ</a>
-    <a href="#contact">Contact</a>
-    <a href="#terms">Terms</a>
-    <a href="#privacy">Privacy</a>
-    <a href="#resources">Resources</a>
-</div>
   <style>
     /* Reset and Base Styles */
     * {
@@ -31,6 +22,8 @@
         align-items: center;
         padding: 0 2rem;
         border-bottom: 1px solid #ddd;
+        overflow: visible; 
+        position: relative; 
     }
 
     /* Nested Flexbox for Left Header Section */
@@ -53,17 +46,23 @@
         border: none;
         border-radius: 5px;
         height: 40px;
-        /* Remove margin-right: 2rem since we're using gap in parent */
+        transition: all 0.3s ease;
+    }
+    .client-portal:hover {
+        background: #1c7a9a;
     }
 
     .hamburger {
-        background: none;
-        border: none;
-        cursor: pointer;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
+            background: none;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            z-index: 100;
+            transition: transform 0.3s ease;
+     }
 
     .hamburger {
         position: relative;
@@ -85,6 +84,7 @@
         transition: right 0.3s ease;
         padding: 1rem;
         z-index: 99;
+        cursor: pointer;
     }
 
     .menu-dropdown.active {
@@ -231,6 +231,17 @@
             <img src="logo.png" class="logo">
             <button class="client-portal">Client Portal</button>
         </div>
+
+        <div class="menu-dropdown">
+            <a href="#about">About Me</a>
+            <a href="#services">Services & Specialties</a>
+            <a href="#faq">FAQ</a>
+            <a href="#contact">Contact</a>
+            <a href="#terms">Terms</a>
+            <a href="#privacy">Privacy</a>
+            <a href="#resources">Resources</a>
+        </div>
+        
         <button class="hamburger">
             <span></span>
             <span></span>
