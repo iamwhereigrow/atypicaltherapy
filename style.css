@@ -11,15 +11,6 @@ body {
     background: var(--white);
 }
 
-nav {
-    padding: 1rem;
-    background: var(--white);
-    border-bottom: 2px solid var(--primary-color);
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-}
-
 .hero {
     text-align: center;
     padding: 4rem 2rem;
@@ -52,16 +43,6 @@ nav {
     padding: 0;
 }
 
-@media (max-width: 768px) {
-    .help-list {
-        columns: 1;
-    }
-    
-    nav {
-        flex-direction: column;
-        text-align: center;
-    }
-}
 nav {
     padding: 1rem 2rem;
     background: var(--white);
@@ -94,7 +75,6 @@ nav {
         justify-content: center;
     }
 }
-/* Fixed header */
 .fixed-header {
     position: fixed;
     top: 0;
