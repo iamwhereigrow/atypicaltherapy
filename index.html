@@ -4,53 +4,160 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Atypical Therapy</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Header Styles */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .logo {
+            width: 150px;
+        }
+
+        .client-portal {
+            margin-left: 2rem;
+            padding: 0.5rem 1rem;
+            background: #2596be;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .hamburger {
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background: #333;
+            margin: 5px 0;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 4rem 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Box Grid */
+        .box-grid {
+            display: flex;
+            gap: 2rem;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .box {
+            flex: 1;
+            padding: 2rem;
+            border-radius: 15px;
+            min-height: 400px;
+        }
+
+        /* Color Classes */
+        .box1 { background: #f0e6ef; }
+        .box2 { background: #e3f0ec; }
+        .box3 { background: #f5e8db; }
+
+        /* Full Width Box */
+        .full-width-box {
+            padding: 3rem 2rem;
+            margin: 2rem 0;
+            background: #f8f9fa;
+        }
+
+        /* Footer CTA */
+        .footer-cta {
+            background: #2596be;
+            padding: 3rem 2rem;
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .cta-button {
+            padding: 1rem 2rem;
+            background: white;
+            color: #2596be;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .social-box img {
+            width: 30px;
+            margin: 0 0.5rem;
+        }
+    </style>
 </head>
 <body>
-<nav class="fixed-header">
-    <a href="index.html" class="logo">
-        <img src="logo.png" class="logo-img">
-    </a>
-    
-    <button class="menu-toggle" aria-label="Open navigation menu">☰</button>
-    
-    <div class="nav-menu">
-        <a href="about.html">About</a>
-        <a href="approach.html">Approach</a>
-        <a href="services.html">Services</a>
-        <a href="blog.html">Blog</a>
-        <a href="resources.html">Resources</a>
-        <a href="contact.html">Contact</a>
-    </div>
-</nav>
-
-    <header class="hero">
-        <h1>Therapy for People Who Carry the Weight of the World</h1>
-        <p>Helping teens, adults, first responders, therapists, and anyone trying to hold it together — even when it feels impossible.</p>
-        <a href="[Your-SimplePractice-Link]" class="button">Book an Appointment</a>
+    <header class="header">
+        <div class="header-left">
+            <img src="logo.png" class="logo">
+            <button class="client-portal">Client Portal</button>
+        </div>
+        <button class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </header>
 
-    <section class="content-block">
-        <h2>You’re Tired of Pretending You’re Fine. I Get It.</h2>
-        <p>Maybe you’re managing anxiety, trauma, or burnout so heavy it follows you everywhere...</p>
-    </section>
+    <main>
+        <section class="hero">
+            <h1>Therapy for People Who Carry the Weight of the World</h1>
+            <p>Maybe you’re managing anxiety, trauma, or burnout so heavy it follows you everywhere. You’ve got a full plate — work, family, expectations — and somewhere along the way, you got lost in the shuffle. Maybe you’re just trying to be better for your kids, or break toxic cycles that keep pulling you back.<b>You’re exhausted, overwhelmed, and done with surface-level fixes. You want real change — even if you’re not quite sure what that looks like yet.</b></p>
+        </section>
 
-    <section class="content-block accent-bg">
-        <h2>What It’s Like to Work With Me</h2>
-        <p>Therapy with me is real talk, real tools, and no fluff...</p>
-    </section>
+        <div class="box-grid">
+            <div class="box box1">
+                <h1>You’re Tired of Pretending You’re Fine. I Get It.</h1>
+                <p>Helping teens, adults, first responders, therapists, and anyone trying to hold it together — even when it feels impossible.</p>
+            </div>
+            <div class="box box2">
+                <!-- Box 2 Content -->
+            </div>
+            <div class="box box3">
+                <!-- Box 3 Content -->
+            </div>
+        </div>
 
-    <section class="content-block">
-        <h2>Who I Help</h2>
-        <ul class="help-list">
-            <li>Teens and adults navigating anxiety...</li>
-            <!-- Add other list items -->
-        </ul>
-    </section>
+        <section class="full-width-box">
+            <!-- What to Expect Content -->
+        </section>
 
-    <footer>
-        <p>&copy; 2023 iamwhereigrow</p>
-    </footer>
-<script src="script.js"></script>
+        <section class="footer-cta">
+            <div class="cta-text">
+                <h2>Healing is messy. Progress is uncomfortable. But it’s always possible — and you don’t have to do it alone.</h2>
+            </div>
+            <button class="cta-button">Start Your Journey</button>
+            <div class="social-box">
+                <h3>Connect With Us</h3>
+                <img src="facebook-icon.png" alt="Facebook">
+                <img src="instagram-icon.png" alt="Instagram">
+                <img src="linktree-icon.png" alt="Linktree">
+            </div>
+        </section>
+    </main>
 </body>
 </html>
