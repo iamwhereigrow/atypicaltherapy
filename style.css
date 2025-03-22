@@ -94,3 +94,66 @@ nav {
         justify-content: center;
     }
 }
+/* Fixed header */
+.fixed-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: var(--white);
+    border-bottom: 2px solid var(--primary-color);
+    padding: 1rem 2rem;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Hide regular menu on mobile */
+.nav-menu {
+    display: none;
+}
+
+/* Show menu when active */
+.nav-menu.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: var(--white);
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    width: 200px;
+}
+
+/* Hamburger menu button */
+.menu-toggle {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--primary-color);
+}
+
+/* Desktop view - show regular menu */
+@media (min-width: 769px) {
+    .menu-toggle {
+        display: none;
+    }
+    
+    .nav-menu {
+        display: flex;
+        gap: 2rem;
+    }
+    
+    .nav-menu.active {
+        position: static;
+        box-shadow: none;
+        width: auto;
+    }
+}
+
+/* Add margin to body to prevent content hiding */
+body {
+    margin-top: 80px; /* Adjust based on header height */
+}
