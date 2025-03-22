@@ -13,7 +13,11 @@
         box-sizing: border-box;
         font-family: 'Arial', sans-serif;
     }
-
+      
+    html {
+        scrollbar-gutter: stable;
+    }
+      
     /* Header Styles */
     .header {
         height: 80px;
@@ -53,25 +57,25 @@
     }
 
     .hamburger {
-            background: none;
-            border: none;
-            cursor: pointer;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            position: relative;
-            z-index: 100;
-            transition: transform 0.3s ease;
-     }
-
-    .hamburger {
+        background: none;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         position: relative;
         z-index: 100;
         transition: transform 0.3s ease;
+        padding: 10px; /* Added for better click area */
     }
 
-    .hamburger:hover span {
-        background: #2596be; /* Color change on hover */
+    .hamburger span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background: #333;
+        margin: 5px 0;
+        transition: all 0.3s ease;
     }
 
     .menu-dropdown {
@@ -192,13 +196,27 @@
         width: 30px;
         margin: 0 0.5rem;
     }
+    @media (max-width: 768px) {
+    .box-grid {
+        flex-direction: column;
+    }
+    
+    .header {
+        padding: 0 1rem;
+    }
+    
+    .client-portal {
+        font-size: 0.9rem;
+    }
+}
 </style>
 <script>
     // Hamburger Menu Functionality
     const hamburger = document.querySelector('.hamburger');
     const menuDropdown = document.querySelector('.menu-dropdown');
 
-    hamburger.addEventListener('click', () => {
+    hamburger.addEventListener('click', (e) => {
+        e.stopPropagation(); // Prevent event bubbling
         hamburger.classList.toggle('active');
         menuDropdown.classList.toggle('active');
     });
@@ -231,7 +249,13 @@
             <img src="logo.png" class="logo">
             <button class="client-portal">Client Portal</button>
         </div>
-
+        
+        <button class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        
         <div class="menu-dropdown">
             <a href="#about">About Me</a>
             <a href="#services">Services & Specialties</a>
@@ -242,11 +266,7 @@
             <a href="#resources">Resources</a>
         </div>
         
-        <button class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
+
     </header>
 
     <main>
