@@ -4,121 +4,135 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Atypical Therapy</title>
-    <style>
-        /* Reset and Base Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
-        }
+  <style>
+    /* Reset and Base Styles */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Arial', sans-serif;
+    }
 
-        /* Header Styles */
-        .header {
-            height: 80px; /* Set explicit header height */
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 2rem;
-            border-bottom: 1px solid #ddd;
-        }
+    /* Header Styles */
+    .header {
+        height: 80px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 2rem;
+        border-bottom: 1px solid #ddd;
+    }
 
-        .logo {
-            width: 150px;
-        }
+    /* Nested Flexbox for Left Header Section */
+    .header-left {
+        display: flex; /* Creates nested flex container */
+        align-items: center; /* Vertically centers children */
+        gap: 2rem; /* Space between logo and button */
+        height: 100%; /* Takes full header height */
+    }
 
-        .client-portal {
-            margin-right: 2rem;
-            padding: 0.5rem 1rem;
-            background: #2596be;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            height: 40px;
-            margin:  auto 0;
-        }
+    .logo {
+        width: 150px;
+        height: auto; /* Maintain aspect ratio */
+    }
 
-        .hamburger {
-            background: none;
-            border: none;
-            cursor: pointer;
-        }
+    .client-portal {
+        padding: 0.5rem 1rem;
+        background: #2596be;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        height: 40px;
+        /* Remove margin-right: 2rem since we're using gap in parent */
+    }
 
-        .hamburger span {
-            display: block;
-            width: 25px;
-            height: 3px;
-            background: #333;
-            margin: 5px 0;
-        }
+    .hamburger {
+        background: none;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 
-        /* Hero Section */
-        .hero {
-            text-align: center;
-            padding: 4rem 2rem;
-            max-width: 800px;
-            margin: 0 auto;
-        }
+    .hamburger span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background: #333;
+        margin: 3px 0;
+    }
 
-        /* Box Grid */
-        .box-grid {
-            display: flex;
-            gap: 2rem;
-            padding: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
+    /* Rest of your existing styles remain the same */
+    /* Hero Section */
+    .hero {
+        text-align: center;
+        padding: 4rem 2rem;
+        max-width: 800px;
+        margin: 0 auto;
+    }
 
-        .box {
-            flex: 1;
-            padding: 2rem;
-            border-radius: 15px;
-            min-height: 400px;
-        }
-        .box4 {
-            max-width: 1200px; /* Match your box-grid width */
-            margin: 2rem auto; /* Center align like the boxes */
-            padding: 2rem;
-            border-radius: 15px;
-            background: #f8f9fa; /* Your chosen color */
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Optional shadow */
-        }
-        /* Color Classes */
-        .box1 { background: #f0e6ef; }
-        .box2 { background: #e3f0ec; }
-        .box3 { background: #f5e8db; }
+    /* Box Grid */
+    .box-grid {
+        display: flex;
+        gap: 2rem;
+        padding: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
 
-        /* Full Width Box */
-        .full-width-box {
-            padding: 3rem 2rem;
-            margin: 2rem 0;
-            background: #f8f9fa;
-        }
+    .box {
+        flex: 1;
+        padding: 2rem;
+        border-radius: 15px;
+        min-height: 400px;
+    }
+    
+    .box4 {
+        max-width: 1200px;
+        margin: 2rem auto;
+        padding: 2rem;
+        border-radius: 15px;
+        background: #f8f9fa;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
 
-        /* Footer CTA */
-        .footer-cta {
-            background: #2596be;
-            padding: 3rem 2rem;
-            color: white;
-            display: flex;
-            align-items: center;
-            gap: 2rem;
-        }
+    /* Color Classes */
+    .box1 { background: #f0e6ef; }
+    .box2 { background: #e3f0ec; }
+    .box3 { background: #f5e8db; }
 
-        .cta-button {
-            padding: 1rem 2rem;
-            background: white;
-            color: #2596be;
-            border: none;
-            border-radius: 5px;
-            font-weight: bold;
-        }
+    /* Full Width Box */
+    .full-width-box {
+        padding: 3rem 2rem;
+        margin: 2rem 0;
+        background: #f8f9fa;
+    }
 
-        .social-box img {
-            width: 30px;
-            margin: 0 0.5rem;
-        }
-    </style>
+    /* Footer CTA */
+    .footer-cta {
+        background: #2596be;
+        padding: 3rem 2rem;
+        color: white;
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .cta-button {
+        padding: 1rem 2rem;
+        background: white;
+        color: #2596be;
+        border: none;
+        border-radius: 5px;
+        font-weight: bold;
+    }
+
+    .social-box img {
+        width: 30px;
+        margin: 0 0.5rem;
+    }
+</style>
 </head>
 <body>
     <header class="header">
