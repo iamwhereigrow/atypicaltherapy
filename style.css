@@ -54,10 +54,17 @@ nav {
     align-items: center;
 }
 
+.logo {
+    max-width: 60%; /* Prevent logo from taking full width */
+    display: flex;
+    align-items: center;
+}
+
 .logo-img {
-    height: 60px;
-    max-width: 200px; 
+    height: auto;
+    max-height: 60px;
     width: auto;
+    max-width: 100%; /* Ensure logo scales proportionally */
 }
 
 .nav-links {
@@ -81,10 +88,13 @@ nav {
 .fixed-header {
     position: fixed;
     top: 0;
-    width: 100%;
+    left: 0; /* Add this */
+    right: 0; /* Add this */
+    width: 100vw; /* Change from 100% */
+    overflow: hidden; /* Prevent content overflow */
+    padding: 0.5rem 1rem;
     background: var(--white);
     border-bottom: 2px solid var(--primary-color);
-    padding: 0.5rem 1rem;
     z-index: 1000;
     display: flex;
     justify-content: space-between;
@@ -94,6 +104,8 @@ nav {
 /* Hide regular menu on mobile */
 .nav-menu {
     display: none;
+    flex-shrink: 1;
+    min-width: 0; /* Allow text truncation */
 }
 
 /* Show menu when active */
@@ -116,27 +128,26 @@ nav {
     font-size: 1.5rem;
     cursor: pointer;
     color: var(--primary-color);
+    flex-shrink: 0; /* Prevent button from shrinking */
+    margin-left: auto; /* Push to far right */
 }
 
 /* Desktop view - show regular menu */
 @media (max-width: 768px) {
     .fixed-header {
-        flex-wrap: wrap;
-        padding: 0.5rem;
+        flex-wrap: nowrap; /* Prevent wrapping */
+        gap: 0.5rem;
     }
     
-    .logo-img {
-        height: 50px;
-    }
-    
-    .menu-toggle {
-        order: 2; /* Moves hamburger to right */
+    .logo {
+        max-width: 50%;
     }
     
     .nav-menu.active {
-        width: 100%; /* Full-width dropdown */
-        right: auto;
+        width: 100%;
         left: 0;
+        right: 0;
+        box-sizing: border-box;
     }
 }
 
