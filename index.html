@@ -215,37 +215,36 @@
 }
 </style>
 <script>
-    // Hamburger Menu Functionality
     document.addEventListener('DOMContentLoaded', () => {
-    const hamburger = document.querySelector('.hamburger');
-    const menuDropdown = document.querySelector('.menu-dropdown');
+        // Hamburger Menu Functionality
+        const hamburger = document.querySelector('.hamburger');
+        const menuDropdown = document.querySelector('.menu-dropdown');
 
-    // Rest of your JavaScript code
-});
-    hamburger.addEventListener('click', (e) => {
-        e.stopPropagation(); // Prevent event bubbling
-        hamburger.classList.toggle('active');
-        menuDropdown.classList.toggle('active');
-    });
+        hamburger.addEventListener('click', (e) => {
+            e.stopPropagation();
+            hamburger.classList.toggle('active');
+            menuDropdown.classList.toggle('active');
+        });
 
-    // Close menu when clicking outside
-    document.addEventListener('click', (e) => {
-        if (!hamburger.contains(e.target) && !menuDropdown.contains(e.target)) {
-            hamburger.classList.remove('active');
-            menuDropdown.classList.remove('active');
-        }
-    });
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!hamburger.contains(e.target) && !menuDropdown.contains(e.target)) {
+                hamburger.classList.remove('active');
+                menuDropdown.classList.remove('active');
+            }
+        });
 
-    // Smooth scroll for menu links (optional)
-    document.querySelectorAll('.menu-dropdown a').forEach(link => {
-        link.addEventListener('click', (e) => {
-            e.preventDefault();
-            const targetId = link.getAttribute('href');
-            document.querySelector(targetId).scrollIntoView({
-                behavior: 'smooth'
+        // Smooth scroll for menu links
+        document.querySelectorAll('.menu-dropdown a').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = link.getAttribute('href');
+                document.querySelector(targetId).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                hamburger.classList.remove('active');
+                menuDropdown.classList.remove('active');
             });
-            hamburger.classList.remove('active');
-            menuDropdown.classList.remove('active');
         });
     });
 </script>
