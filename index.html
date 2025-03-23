@@ -27,20 +27,20 @@
         padding: 0 2rem;
         border-bottom: 1px solid #ddd;
         position: relative;
-        background-color: #3C4142;
+        background-color: #f3eee7;
     }
 
     .header-left {
         display: flex;
         align-items: center;
         gap: 2rem; /* Space between logo and nav links */
-        background-color: #F8F6F2;
+        background-color: #f3eee7;
     }
 
     .logo {
         width: 150px;
         height: auto;
-        background-color: #F8F6F2;
+        background-color: #f3eee7;
     }
 
     /* Client Portal Button */
@@ -66,8 +66,8 @@
         list-style: none;
         margin: 0;
         padding: 0;
-        background-color: #3C4142;
-        color: #FFFFFF;
+        background-color: #f3eee7;
+        /* Remove absolute positioning */
         position: static;
         transform: none;
         left: auto;
@@ -78,8 +78,7 @@
         text-decoration: none;
         transition: color 0.3s ease;
         font-weight: 500;
-        color: #ffffff;
-        background-color: #3C4142;
+        background-color: #f3eee7;
     }
 
     .nav-links a:hover {
@@ -100,7 +99,7 @@
         cursor: pointer;
         padding: 20px;
         z-index: 100;
-        background-color: #F8F6F2;
+        background-color: #FFFFFF;
     }
 
     .hamburger span {
@@ -182,9 +181,9 @@
         min-height: 400px;
     }
 
-    .box1 { background: #475569; } /*Buttons */
-    .box2 { background: #9CAFAA; } /*Trims */
-    .box3 { background: #E4B169; } /*F8F6F2 */
+    .box1 { background: #673147; }
+    .box2 { background: #e3f0ec; }
+    .box3 { background: #f5e8db; }
 
     .box4 {
         max-width: 1200px;
@@ -203,20 +202,48 @@
         padding: 3rem 2rem;
         color: white;
         display: flex;
+        flex-direction: column;
         align-items: center;
         gap: 2rem;
     }
-
-    .cta-button {
-        padding: 1rem 2rem;
-        background: #FFDB58;
-        color: #000000;
-        border: none;
-        border-radius: 5px;
-        font-weight: bold;
-        cursor: pointer;
+    
+    .cta-content {
+        width: 100%;
+        max-width: 1200px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2rem;
     }
-
+    
+    .cta-text {
+        flex: 2;
+        text-align: left;
+    }
+    
+    .cta-button {
+        flex: 1;
+        max-width: 200px;
+    }
+    
+    .social-box {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    
+    .disclaimer {
+        width: 100%;
+        max-width: 1200px;
+        text-align: center;
+        font-size: 0.8rem;
+        color: rgba(255,255,255,0.8);
+        padding-top: 2rem;
+        border-top: 1px solid rgba(255,255,255,0.2);
+        margin-top: 2rem;
+    }
+    
     .social-box img {
         width: 30px;
         margin: 0 0.5rem;
@@ -248,6 +275,23 @@
         .footer-cta {
             flex-direction: column;
             text-align: center;
+            padding: 2rem 1rem;
+        }
+        .cta-content {
+            flex-direction: column;
+            text-align: center;
+        }
+        
+        .cta-text {
+            text-align: center;
+        }
+        
+        .social-box {
+            align-items: center;
+        }
+        .disclaimer {
+            font-size: 0.7rem;
+            padding: 1rem;
         }
     }
 </style>
@@ -361,18 +405,23 @@
                 <p>In our first session, we’ll lay the foundation. No pressure to dive deep unless you’re ready. You set the pace — I just help you find the path.<br>Each session is tailored to you, not a checkbox. We might focus on the day-to-day stressors, or we might unpack long-standing pain. Either way, the goal is clarity, healing, and strategies you can actually use.<br> Between sessions, I may offer reflections or tools that help you apply our work in the real world. But this isn’t homework for homework’s sake — it’s about building something real, sustainable, and <em>yours</em>.<p>
             </div>
         </section>
-        <section class="footer-cta">
-            <div class="cta-text">
-                <h2>Healing is messy. Progress is uncomfortable. But it’s always possible — and you don’t have to do it alone.</h2>
-            </div>
-            <button class="cta-button">Start Your Journey</button>
-            <div class="social-box">
-                <h3>Connect With Us</h3>
-                <img src="facebook-icon.png" alt="Facebook">
-                <img src="instagram-icon.png" alt="Instagram">
-                <img src="linktree-icon.png" alt="Linktree">
-            </div>
-        </section>
+      <section class="footer-cta">
+          <div class="cta-content">
+              <div class="cta-text">
+                  <h2>Healing is messy. Progress is uncomfortable. But it’s always possible — and you don’t have to do it alone.</h2>
+              </div>
+              <button class="cta-button">Start Your Journey</button>
+              <div class="social-box">
+                  <h3>Connect With Us</h3>
+                  <img src="icons8-facebook-50.png" alt="Facebook">
+                  <img src="icons8-instagram-50.png" alt="Instagram">
+                  <img src="icons8-linktree-48.png" alt="Linktree">
+              </div>
+          </div>
+          <div class="disclaimer">
+              <p>THE ATYPICAL THERAPY WEBSITE IS NOT TO BE USED FOR EMERGENCY SITUATIONS. IF YOU OR OTHERS ARE IN IMMEDIATE DANGER OR EXPERIENCING A MEDICAL EMERGENCY, CALL 911 IMMEDIATELY.</p>
+          </div>
+      </section>
     </main>
 </body>
 </html>
