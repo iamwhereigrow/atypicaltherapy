@@ -37,7 +37,11 @@
         gap: 2rem; /* Space between logo and button */
         height: 100%; /* Takes full header height */
     }
-
+    .header-right {
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
     .logo {
         width: 150px;
         height: auto; /* Maintain aspect ratio */
@@ -80,7 +84,7 @@
 
     .menu-dropdown {
         position: absolute;
-        top: 80px; /* Match header height */
+        top: 100%; /* Match header height */
         right: -100%;
         width: 250px;
         background: white;
@@ -212,9 +216,12 @@
 </style>
 <script>
     // Hamburger Menu Functionality
+    document.addEventListener('DOMContentLoaded', () => {
     const hamburger = document.querySelector('.hamburger');
     const menuDropdown = document.querySelector('.menu-dropdown');
 
+    // Rest of your JavaScript code
+});
     hamburger.addEventListener('click', (e) => {
         e.stopPropagation(); // Prevent event bubbling
         hamburger.classList.toggle('active');
@@ -249,12 +256,12 @@
             <img src="logo.png" class="logo">
             <button class="client-portal">Client Portal</button>
         </div>
-        
-        <button class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
+            <div class="header-right">
+                <button class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
         
         <div class="menu-dropdown">
             <a href="#about">About Me</a>
@@ -265,8 +272,8 @@
             <a href="#privacy">Privacy</a>
             <a href="#resources">Resources</a>
         </div>
-        
-
+    
+     </div>
     </header>
 
     <main>
