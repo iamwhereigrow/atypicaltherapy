@@ -1,4 +1,16 @@
-    document.addEventListener('DOMContentLoaded', () => {
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+            });
+
+        // Load Footer
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            });
+        document.addEventListener('DOMContentLoaded', () => {
         // Hamburger Menu Functionality
         const hamburger = document.querySelector('.hamburger');
         const menuDropdown = document.querySelector('.menu-dropdown');
