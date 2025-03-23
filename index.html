@@ -27,17 +27,20 @@
         padding: 0 2rem;
         border-bottom: 1px solid #ddd;
         position: relative;
+        background-color: #FFFFFF;
     }
 
     .header-left {
         display: flex;
         align-items: center;
-        gap: 2rem;
+        gap: 2rem; /* Space between logo and nav links */
+        background-color: #FFFFFF;
     }
 
     .logo {
         width: 150px;
         height: auto;
+        background-color: #FFFFFF;
     }
 
     /* Client Portal Button */
@@ -59,8 +62,15 @@
     /* Desktop Navigation */
     .nav-links {
         display: flex;
-        gap: 1.5rem;
+        gap: 2rem;
         list-style: none;
+        margin: 0;
+        padding: 0;
+        background-color: #FFFFFF;
+        /* Remove absolute positioning */
+        position: static;
+        transform: none;
+        left: auto;
     }
 
     .nav-links a {
@@ -68,10 +78,17 @@
         text-decoration: none;
         transition: color 0.3s ease;
         font-weight: 500;
+        background-color: #FFFFFF;
     }
 
     .nav-links a:hover {
         color: #2596be;
+    }
+    
+    .header-right {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
     }
 
     /* Mobile Navigation */
@@ -80,17 +97,19 @@
         background: none;
         border: none;
         cursor: pointer;
-        padding: 10px;
+        padding: 20px;
         z-index: 100;
+        background-color: #FFFFFF;
     }
 
     .hamburger span {
         display: block;
         width: 25px;
         height: 3px;
-        background: #333;
+        background: #000;
         margin: 5px 0;
         transition: all 0.3s ease;
+        
     }
 
     .menu-dropdown {
@@ -99,7 +118,7 @@
         top: 100%;
         right: 0;
         width: 250px;
-        background: white;
+        background: #ffffff;
         box-shadow: 0 8px 16px rgba(0,0,0,0.1);
         padding: 1rem;
         z-index: 99;
@@ -116,6 +135,8 @@
         text-decoration: none;
         transition: all 0.2s ease;
         border-radius: 4px;
+        background-color: #FFFFFF;
+
     }
 
     .menu-dropdown a:hover {
@@ -126,7 +147,7 @@
 
     /* Hamburger Animation */
     .hamburger.active span:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
+        transform: rotate(45deg) translate(9px, 9px);
     }
 
     .hamburger.active span:nth-child(2) {
@@ -134,7 +155,7 @@
     }
 
     .hamburger.active span:nth-child(3) {
-        transform: rotate(-45deg) translate(7px, -8px);
+        transform: rotate(-45deg) translate(9px, -9px);
     }
 
     /* Main Content Styles */
@@ -160,22 +181,24 @@
         min-height: 400px;
     }
 
-    .box1 { background: #f0e6ef; }
+    .box1 { background: #673147; }
     .box2 { background: #e3f0ec; }
     .box3 { background: #f5e8db; }
 
     .box4 {
         max-width: 1200px;
+        width: 91%;
         margin: 2rem auto;
         padding: 2rem;
         border-radius: 15px;
         background: #f8f9fa;
         box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+
     }
 
     /* Footer CTA */
     .footer-cta {
-        background: #2596be;
+        background: #102434;
         padding: 3rem 2rem;
         color: white;
         display: flex;
@@ -185,8 +208,8 @@
 
     .cta-button {
         padding: 1rem 2rem;
-        background: white;
-        color: #2596be;
+        background: #FFDB58;
+        color: #000000;
         border: none;
         border-radius: 5px;
         font-weight: bold;
@@ -263,47 +286,49 @@
 </script>
 </head>
 <body>
-    <header class="header">
-        <div class="header-left">
-            <img src="logo.png" class="logo">
-            <button class="client-portal">Client Portal</button>
-        </div>
-        
-        <div class="header-right">
-            <!-- Desktop Navigation -->
-            <nav class="nav-links">
-                <a href="#about">About</a>
-                <a href="#services">Services</a>
-                <a href="#faq">FAQ</a>
-                <a href="#contact">Contact</a>
-            </nav>
-            
-            <!-- Mobile Hamburger -->
-            <button class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            
-            <!-- Mobile Dropdown -->
-            <div class="menu-dropdown">
-                <a href="#about">About Me</a>
-                <a href="#services">Services & Specialties</a>
-                <a href="#faq">FAQ</a>
-                <a href="#contact">Contact</a>
-                <a href="#terms">Terms</a>
-                <a href="#privacy">Privacy</a>
-                <a href="#resources">Resources</a>
-            </div>
-        </div>
-    </header>
+<header class="header">
+    <div class="header-left">
+        <img src="logo.png" class="logo">
+        <nav class="nav-links">
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contact">Contact</a>
+      </nav>
+    </div>
+
+    <!-- Desktop Navigation -->
+
+
+    <div class="header-right">
+        <button class="client-portal">Client Portal</button>
+
+        <!-- Mobile Hamburger -->
+        <button class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+
+    <!-- Mobile Dropdown -->
+    <div class="menu-dropdown">
+        <a href="#about">About Me</a>
+        <a href="#services">Services & Specialties</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+        <a href="#terms">Terms</a>
+        <a href="#privacy">Privacy</a>
+        <a href="#resources">Resources</a>
+    </div>
+</header>
 
     <main>
         <section class="hero">
             <h1>Therapy for People Who Carry the Weight of the World</h1>
             <p>Helping teens, adults, first responders, therapists, and anyone trying to hold it together — even when it feels impossible.</p>
         </section>
-
+        
         <section class="box-container"> 
             <div class="box-grid">
             <div class="box box1">
