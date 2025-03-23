@@ -34,7 +34,10 @@
         height: auto;
         background-color: #f3eee7;
     }
-
+    .jhpfp {
+        width: 500px;
+        height: auto;
+    }
     /* Client Portal Button */
     .button {
         padding: 0.5rem 1rem;
