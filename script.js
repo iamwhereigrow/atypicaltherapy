@@ -1,21 +1,33 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navMenu = document.querySelector('.nav-menu');
+    document.addEventListener('DOMContentLoaded', () => {
+        // Hamburger Menu Functionality
+        const hamburger = document.querySelector('.hamburger');
+        const menuDropdown = document.querySelector('.menu-dropdown');
 
-    // Toggle menu with error handling
-    if(menuToggle && navMenu) {
-        menuToggle.addEventListener('click', function(e) {
+        hamburger.addEventListener('click', (e) => {
             e.stopPropagation();
-            navMenu.classList.toggle('active');
+            hamburger.classList.toggle('active');
+            menuDropdown.classList.toggle('active');
         });
 
         // Close menu when clicking outside
-        document.addEventListener('click', function(e) {
-            if (!navMenu.contains(e.target) && !menuToggle.contains(e.target)) {
-                navMenu.classList.remove('active');
+        document.addEventListener('click', (e) => {
+            if (!hamburger.contains(e.target) && !menuDropdown.contains(e.target)) {
+                hamburger.classList.remove('active');
+                menuDropdown.classList.remove('active');
             }
+        document.getElementById("current-year").textContent = new Date().getFullYear();
         });
-    } else {
-        console.error('Menu elements not found! Check your HTML classes');
-    }
-});
+
+        // Smooth scroll for menu links
+        document.querySelectorAll('.menu-dropdown a').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = link.getAttribute('href');
+                document.querySelector(targetId).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                hamburger.classList.remove('active');
+                menuDropdown.classList.remove('active');
+            });
+        });
+    });
