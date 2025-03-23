@@ -46,7 +46,7 @@
     /* Client Portal Button */
     .button {
         padding: 0.5rem 1rem;
-        background: #027f41;
+        background: #E4B169;
         color: white;
         border: none;
         border-radius: 5px;
@@ -181,8 +181,8 @@
         min-height: 400px;
     }
 
-    .box1 { background: #673147; }
-    .box2 { background: #e3f0ec; }
+    .box1 { background: #e3f0ec; }
+    .box2 { background: #673147; }
     .box3 { background: #f5e8db; }
 
     .box4 {
@@ -207,14 +207,15 @@
         gap: 2rem;
     }
     
-    .cta-content {
-        width: 100%;
-        max-width: 1200px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 2rem;
-    }
+.cta-content {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    flex-wrap: wrap; /* Add this */
+}
     
     .cta-text {
         flex: 2;
@@ -226,13 +227,18 @@
         max-width: 200px;
     }
     
-    .social-box {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-        gap: 1rem; /* Added for spacing */
-    }
+.social-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-left: auto; /* Add this */
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
     
     .social-box h3 {
         margin-bottom: 0; /* Remove default margin */
@@ -301,6 +307,8 @@
         
         .social-box {
             align-items: center;
+            margin-left: 0;
+
         }
         .disclaimer {
             font-size: 0.7rem;
@@ -359,7 +367,7 @@
 
 
     <div class="header-right">
-        <button class="button">Client Portal</button>
+        <button href="https://atypicaltherapy.clientsecure.me/sign-in" class="button">Client Portal</button>
 
         <!-- Mobile Hamburger -->
         <button class="hamburger">
@@ -390,16 +398,17 @@
         <section class="box-container"> 
             <div class="box-grid">
             <div class="box box1">
-                <h2>You’re Tired of Pretending You’re Fine. I Get It.</h2>
-                <p>Maybe you’re managing anxiety, trauma, or burnout so heavy it follows you everywhere. You’ve got a full plate — work, family, expectations — and somewhere along the way, you got lost in the shuffle. Maybe you’re just trying to be better for your kids, or break toxic cycles that keep pulling you back.<br>You’re exhausted, overwhelmed, and done with surface-level fixes. You want real change — even if you’re not quite sure what that looks like yet.<p>
+                <h2 style="text-align: center;">You’re Tired of Pretending You’re Fine. I Get It.</h2>
+                <p><br>Maybe you’re managing anxiety, trauma, or burnout so heavy it follows you everywhere. You’ve got a full plate — work, family, expectations — and somewhere along the way, you got lost in the shuffle. Maybe you’re just trying to be better for your kids, or break toxic cycles that keep pulling you back.<br>You’re exhausted, overwhelmed, and done with surface-level fixes. You want real change — even if you’re not quite sure what that looks like yet.<p>
             </div>
             <div class="box box2">
-                <h2>What It’s Like to Work With Me</h2>
-                <p>Therapy with me is real talk, real tools, and no fluff.<br>This isn’t a place to vent and go — it’s where we do the work, at your pace, in your voice. I use a mix of <b>DBT, Brainspotting, trauma-informed care,</b> and practical strategies to help you manage the now and heal the past.<br>I’m trained in <b>complex trauma</b>, and I’ll challenge you (with compassion) to stop shrinking yourself to survive. My style is honest, flexible, and focused on helping you show up for yourself.<br>If you're ready to stop pretending and start processing, we’ll be a good fit.<p>
+                <h2 style="text-align: center;">What It’s Like to Work With Me</h2>
+                <p><br>Therapy with me is real talk, real tools, and no fluff.<br>This isn’t a place to vent and go — it’s where we do the work, at your pace, in your voice. I use a mix of <b>DBT, Brainspotting, trauma-informed care,</b> and practical strategies to help you manage the now and heal the past.<br>I’m trained in <b>complex trauma</b>, and I’ll challenge you (with compassion) to stop shrinking yourself to survive. My style is honest, flexible, and focused on helping you show up for yourself.<br>If you're ready to stop pretending and start processing, we’ll be a good fit.<p>
             </div>
             <div class="box box3">
-                <h2>Who I help</h2>
+                <h2 style="text-align: center;">Who I help</h2>
                 <ul>
+                  <br>
                     <li>Teens and adults navigating anxiety, depression, trauma, or overwhelm</li>
                     <li>First responders, therapists, and helpers carrying the emotional load for everyone else</li>
                     <li>LGBTQIA+ clients who want to feel safe, seen, and supported</li>
@@ -414,23 +423,25 @@
             </div>
         
             <div class="box4">
-                <h2>What to Expect in Therapy</h2>
+                <h2 style="text-align: center;">What to Expect in Therapy</h2>
                 <p>In our first session, we’ll lay the foundation. No pressure to dive deep unless you’re ready. You set the pace — I just help you find the path.<br>Each session is tailored to you, not a checkbox. We might focus on the day-to-day stressors, or we might unpack long-standing pain. Either way, the goal is clarity, healing, and strategies you can actually use.<br> Between sessions, I may offer reflections or tools that help you apply our work in the real world. But this isn’t homework for homework’s sake — it’s about building something real, sustainable, and <em>yours</em>.<p>
             </div>
         </section>
       <section class="footer-cta">
           <div class="cta-content">
               <div class="cta-text">
-                  <h2>Healing is messy. Progress is uncomfortable. But it’s always possible — and you don’t have to do it alone.</h2>
+                  <h4>Healing is messy. Progress is uncomfortable. But it’s always possible — and you don’t have to do it alone.
+                  </h4>
               </div>
               <button class="button">Start Your Journey</button>
-              <div class="social-box">
-                  <h3>Connect With Us</h3>
-                  <img src="icons8-facebook-50.png" alt="Facebook">
-                  <img src="icons8-instagram-50.png" alt="Instagram">
-                  <img src="icons8-linktree-48.png" alt="Linktree">
-              </div>
-          </div>
+                <div class="social-box">
+                    <h3>Connect With Us</h3>
+                    <div class="social-icons">
+                        <img src="icons8-facebook-50.png" alt="Facebook">
+                        <img src="icons8-instagram-50.png" alt="Instagram">
+                        <img src="icons8-linktree-48.png" alt="Linktree">
+                    </div>
+                </div>
           <div class="disclaimer">
               <p>THE ATYPICAL THERAPY WEBSITE IS NOT TO BE USED FOR EMERGENCY SITUATIONS. IF YOU OR OTHERS ARE IN IMMEDIATE DANGER OR EXPERIENCING A MEDICAL EMERGENCY, CALL 911 IMMEDIATELY.</p>
           </div>
