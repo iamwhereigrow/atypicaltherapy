@@ -44,9 +44,9 @@
     }
 
     /* Client Portal Button */
-    .client-portal {
+    .button {
         padding: 0.5rem 1rem;
-        background: #2596be;
+        background: #027f41;
         color: white;
         border: none;
         border-radius: 5px;
@@ -56,7 +56,7 @@
     }
 
     .client-portal:hover {
-        background: #1c7a9a;
+        background: #006735;
     }
 
     /* Desktop Navigation */
@@ -231,8 +231,21 @@
         display: flex;
         flex-direction: column;
         align-items: flex-end;
+        gap: 1rem; /* Added for spacing */
     }
     
+    .social-box h3 {
+        margin-bottom: 0; /* Remove default margin */
+    }
+    .social-box img {
+        width: 30px;
+        margin: 0; /* Remove horizontal margins */
+        transition: transform 0.3s ease; /* Optional hover effect */
+    }
+    
+    .social-box img:hover {
+        transform: translateY(-2px); /* Optional hover effect */
+    }
     .disclaimer {
         width: 100%;
         max-width: 1200px;
@@ -346,7 +359,7 @@
 
 
     <div class="header-right">
-        <button class="client-portal">Client Portal</button>
+        <button class="button">Client Portal</button>
 
         <!-- Mobile Hamburger -->
         <button class="hamburger">
@@ -410,7 +423,7 @@
               <div class="cta-text">
                   <h2>Healing is messy. Progress is uncomfortable. But it’s always possible — and you don’t have to do it alone.</h2>
               </div>
-              <button class="cta-button">Start Your Journey</button>
+              <button class="button">Start Your Journey</button>
               <div class="social-box">
                   <h3>Connect With Us</h3>
                   <img src="icons8-facebook-50.png" alt="Facebook">
