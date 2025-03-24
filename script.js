@@ -1,17 +1,9 @@
-        fetch('header.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('header').innerHTML = data;
-            });
-
-        // Load Footer
-        fetch('footer.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('footer').innerHTML = data;
-            });
-        document.addEventListener('DOMContentLoaded', () => {
-        // Hamburger Menu Functionality
+fetch('header.html')
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById('header').innerHTML = data;
+        
+        // PUT HAMBURGER CODE HERE AFTER HEADER LOADS
         const hamburger = document.querySelector('.hamburger');
         const menuDropdown = document.querySelector('.menu-dropdown');
 
@@ -27,19 +19,14 @@
                 hamburger.classList.remove('active');
                 menuDropdown.classList.remove('active');
             }
-        document.getElementById("current-year").textContent = new Date().getFullYear();
         });
+    })
+    .catch(error => console.error('Error loading header:', error));
 
-        // Smooth scroll for menu links
-        document.querySelectorAll('.menu-dropdown a').forEach(link => {
-            link.addEventListener('click', (e) => {
-                e.preventDefault();
-                const targetId = link.getAttribute('href');
-                document.querySelector(targetId).scrollIntoView({
-                    behavior: 'smooth'
-                });
-                hamburger.classList.remove('active');
-                menuDropdown.classList.remove('active');
-            });
-        });
-    });
+fetch('footer.html')
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById('footer').innerHTML = data;
+        document.getElementById("current-year").textContent = new Date().getFullYear();
+    })
+    .catch(error => console.error('Error loading footer:', error));
