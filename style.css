@@ -35,8 +35,9 @@
         background-color: #f3eee7;
     }
     .ampfp {
-        width: 300px;
+        width: 200px;
         height: auto;
+        border-radius: 15px;
     }
     /* Client Portal Button */
     .button {
