@@ -49,6 +49,7 @@
         height: 40px;
         transition: all 0.3s ease;
         cursor: pointer;
+        margin-top: 1 rem;
     }
 
     .client-portal:hover {
@@ -174,7 +175,6 @@
         flex: 1;
         padding: 2rem;
         border-radius: 15px;
-        min-height: 400px;
     }
 
     .box1 { background: #e3f0ec; }
