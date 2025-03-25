@@ -38,6 +38,12 @@
         width: 200px;
         height: auto;
         border-radius: 15px;
+        display: block;
+        margin: 0 auto;
+    }
+    .image-container {
+        display: flex;
+        justify-content: center; /* Center the image */
     }
     /* Client Portal Button */
     .button {
@@ -204,15 +210,15 @@
         text-align: center;
     }
     
-.cta-content {
-    width: 100%;
-    max-width: 1200px;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 2rem;
-    flex-wrap: wrap; /* Add this */
-}
+    .cta-content {
+        width: 100%;
+        max-width: 1200px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 2rem;
+        flex-wrap: wrap; /* Add this */
+    }
     
     .cta-text {
         flex: 2;
@@ -224,18 +230,18 @@
         max-width: 200px;
     }
     
-.social-box {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    margin-left: auto; /* Add this */
-}
+    .social-box {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        margin-left: auto; /* Add this */
+    }
 
-.social-icons {
-    display: flex;
-    gap: 1rem;
-    margin-top: 0.5rem;
-}
+    .social-icons {
+        display: flex;
+        gap: 1rem;
+        margin-top: 0.5rem;
+    }
     
     .social-box h3 {
         margin-bottom: 0; /* Remove default margin */
