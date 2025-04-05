@@ -294,6 +294,9 @@
 
         .client-portal {
             font-size: 0.9rem;
+            margin: 0 auto; 
+            width: 100%;
+            max-width: 250px;
         }
 
         .box-grid {
@@ -308,6 +311,8 @@
         .cta-content {
             flex-direction: column;
             text-align: center;
+            align-items: center; /* Add this line */
+
         }
         
         .cta-text {
@@ -315,7 +320,8 @@
         }
         
         .social-box {
-            align-items: center;
+            width: 100%;
+            align-items: center; !important;
             margin-left: 0;
         
 
