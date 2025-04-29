@@ -45,6 +45,22 @@
         display: flex;
         justify-content: center; /* Center the image */
     }
+
+
+.image-wrapper {
+    display: flex;
+    justify-content: center; /* Center the image */
+    max-width: 100%;
+    margin: 0 auto;
+}
+.rounded-img {
+    border-radius: 15px; /* Your existing rounded corners */
+    max-width: 100%;    /* Ensures it scales down */
+    height: auto;       /* Maintains aspect ratio */
+    width: 600px;       /* Default size (adjust as needed) */
+    display: block;     /* Removes extra space below the image */
+    margin: 0 auto;     /* Centers the image */
+}
     /* Client Portal Button */
     .button {
         padding: 0.5rem 1rem;
