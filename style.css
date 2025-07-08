@@ -29,6 +29,19 @@
         background-color: #f3eee7;
     }
 
+    /* Hyperlink Style */
+    a {
+      color: #003366; /* Dark blue with high contrast */
+      text-decoration: underline; /* Keeps it visually identifiable as a link */
+    }
+    a:visited {
+      color: #002244; /* Slightly different dark blue for visited links */
+    }
+    a:hover,
+    a:focus {
+      color: #0055aa; /* A slightly lighter but still dark blue for hover/focus */
+      outline: 2px solid #0055aa; /* Keyboard focus indicator */
+    }
     .logo {
         width: 150px;
         height: auto;
