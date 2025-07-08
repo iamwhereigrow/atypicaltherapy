@@ -356,7 +356,7 @@
         .skip-link {
           position: absolute;
           left: -999px; /* Visually hide it offscreen */
-          top: auto;
+          top: -10px;
           width: 1px;
           height: 1px;
           overflow: hidden;
@@ -365,8 +365,8 @@
         
         .skip-link:focus {
           position: absolute;
-          top: 10px;
-          left: 10px;
+          top: -10px;
+          left: -999px;
           width: auto;
           height: auto;
           padding: 8px 16px;
