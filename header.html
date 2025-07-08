@@ -9,13 +9,13 @@
     <link rel="manifest" href="site.webmanifest">
   <script src="script.js" defer></script>
 </head>
-<header class="header">
+<header role="banner" class="header">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <div class="header-left">
         <a href="https://atypicaltherapy.life/" role="link" aria-label="Go to homepage">
           <img src="logo.png" class="logo" alt="Atypical Therapy logo - return to homepage">
         </a>
-        <nav class="nav-links">
+        <nav role="navigation" class="nav-links">
             <a href="about.html">About</a>
             <a href="services.html">Services</a>
             <a href="faq.html">FAQ</a>
@@ -30,11 +30,10 @@
         </button>
 
         <!-- Mobile Hamburger -->
-        <button class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
+        <button class="hamburger" aria-label="Toggle navigation menu">
+          <span></span><span></span><span></span>
         </button>
+
     </div>
 
     <!-- Mobile Dropdown -->
