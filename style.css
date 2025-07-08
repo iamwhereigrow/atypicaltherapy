@@ -35,6 +35,7 @@
         background-color: #f3eee7;
     }
     .listing_logo {
+        width: 200px;
         height: auto;
         border-radius: 15px;
         display: block;
