@@ -34,6 +34,12 @@
         height: auto;
         background-color: #f3eee7;
     }
+    .listing_logo {
+        height: auto;
+        border-radius: 15px;
+        display: block;
+        margin: 0 auto;
+    }
     .ampfp {
         width: 200px;
         height: auto;
